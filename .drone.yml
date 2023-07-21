@@ -8,12 +8,12 @@ steps:
   - pip install -r requirements.txt
   - mkdocs build
 
-- name: update
+- name: git-push
   image: appleboy/drone-git-push
-    settings:
-      remote_name: origin
-      remote: git@github.com:jsavko/Drone-CI-Test.git
-      branch: pages
-      local_ref: pages
-      ssh_key:
-        from_secret: key
+  settings:
+    branch: pages
+    remote: git@github.com:jsavko/Drone-CI-Test.git
+    force: false
+    commit: true
+    ssh_key:
+      from_secret: key
