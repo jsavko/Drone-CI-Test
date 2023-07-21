@@ -4,13 +4,17 @@ name: default
 workspace:
   path: /drone/src
 
+when:
+  branch:
+  - main
+  
 steps:
 - name: test
   image: squidfunk/mkdocs-material
   commands:
   - pip install -r requirements.txt
   - mkdocs build
-  
+
 
 - name: git-push
   image: appleboy/drone-git-push
@@ -23,7 +27,3 @@ steps:
     ssh_key:
       from_secret: GIT_KEY
     commit_message: "Update readme to new version [CI SKIP]"
-
-when:
-  branch:
-  - master
