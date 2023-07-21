@@ -11,9 +11,8 @@ steps:
 - name: git-push
   image: appleboy/drone-git-push
   settings:
+    remote_name: origin
     branch: pages
-    remote: git@github.com:jsavko/Drone-CI-Test.git
-    force: false
-    commit: true
+    local_ref: pages
     ssh_key:
       from_secret: GIT_KEY
