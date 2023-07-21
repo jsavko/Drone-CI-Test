@@ -7,7 +7,7 @@ steps:
   image: alpine
 steps:
 - name: build site
-  image: squidfunk/mkdocs-material
+  image: squidfunk/mkdocs-material:latest
   commands: 
   - mkdocs build
 - name: git-push
