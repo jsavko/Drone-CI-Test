@@ -11,8 +11,12 @@ steps:
 - name: git-push
   image: appleboy/drone-git-push
   settings:
-    remote_name: origin
     branch: pages
-    local_ref: pages
+    remote: git@github.com:jsavko/Drone-CI-Test.git
+    force: false
+    commit: true
     ssh_key:
       from_secret: GIT_KEY
+    commit_message: "Update readme to new version [CI SKIP]"
+    commands: 
+    - git add *
