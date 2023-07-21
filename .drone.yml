@@ -3,11 +3,9 @@ type: docker
 name: default
 
 steps:
-
 - name: build site
-  image: docker.io/squidfunk/mkdocs-material/latest
+  image: squidfunk/mkdocs-material
   commands: mkdocs build
-
 - name: git-push
   settings:
     branch: pages
