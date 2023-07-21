@@ -8,7 +8,7 @@ steps:
   - pip install -r requirements.txt
   - mkdocs build
 
-- name: git-push
+- name: git-pushs
   image: appleboy/drone-git-push
   settings:
     branch: pages
