@@ -10,6 +10,6 @@ steps:
 
 - name: update
   image: appleboy/drone-git-push
-  remote: git@github.com:jsavko/Drone-CI-Test.git
+  remote_name: origin
   branch: pages
-  commit: true
+  local_ref: pages
