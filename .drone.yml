@@ -10,5 +10,5 @@ steps:
 
 - name: update
   image: appleboy/drone-git-push
-    branch: pages
-    commit: true
+  branch: pages
+  commit: true
