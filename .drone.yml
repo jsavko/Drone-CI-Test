@@ -9,7 +9,9 @@ steps:
 - name: build site
   image: squidfunk/mkdocs-material:latest
   commands: 
+  - pip install -U -r ./requirements.txt
   - mkdocs build
+  
 - name: git-push
   settings:
     branch: pages
