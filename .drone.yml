@@ -16,7 +16,7 @@ steps:
   settings:
     branch: pages
     remote: git@github.com:jsavko/Drone-CI-Test.git
-    force: false
+    force: true
     commit: true
     path: /drone/src/site
     ssh_key:
