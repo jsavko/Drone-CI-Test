@@ -16,4 +16,4 @@ steps:
     force: false
     commit: true
     ssh_key:
-      from_secret: key
+      from_secret: GIT_KEY
