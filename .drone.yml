@@ -4,7 +4,13 @@ name: default
 
 steps:
 - name: greeting
-  image: alpine
+  image: python
   commands: 
   - pip install requirements.txt
   - mkdocs build
+  
+- name: git-push
+  settings:
+    branch: pages
+    force: false
+    commit: true
