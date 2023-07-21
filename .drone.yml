@@ -10,5 +10,6 @@ steps:
 
 - name: update
   image: appleboy/drone-git-push
+  remote: git@github.com:jsavko/Drone-CI-Test.git
   branch: pages
   commit: true
