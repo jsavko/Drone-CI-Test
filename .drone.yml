@@ -13,3 +13,5 @@ steps:
   remote_name: origin
   branch: pages
   local_ref: pages
+  ssh_key:
+    from_secret: key
