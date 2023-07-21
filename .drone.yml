@@ -3,9 +3,13 @@ type: docker
 name: default
 
 steps:
+- name: greeting
+  image: alpine
+steps:
 - name: build site
   image: squidfunk/mkdocs-material
-  commands: mkdocs build
+  commands: 
+  - mkdocs build
 - name: git-push
   settings:
     branch: pages
