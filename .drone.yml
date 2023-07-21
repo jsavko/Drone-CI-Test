@@ -7,3 +7,8 @@ steps:
   commands:
   - pip install -r requirements.txt
   - mkdocs build
+
+- name: update
+  image: appleboy/drone-git-push
+    branch: pages
+    commit: true
