@@ -20,7 +20,6 @@ steps:
     remote: git@github.com:jsavko/Drone-CI-Test.git
     force: true
     commit: true
-    path: /drone/src/site
     ssh_key:
       from_secret: GIT_KEY
     commit_message: "Update readme to new version [CI SKIP]"
