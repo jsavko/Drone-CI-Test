@@ -10,6 +10,8 @@ steps:
   commands:
   - pip install -r requirements.txt
   - mkdocs build
+  - rm -R docs
+  - mv site docs
 
 - name: git-pushs
   image: appleboy/drone-git-push
